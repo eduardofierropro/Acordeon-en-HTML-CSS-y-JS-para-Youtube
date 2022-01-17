@@ -23,10 +23,27 @@
 }
 /* Configuramos si un usuario ha activado el modo alto contraste. (BETA) */
 /*
+
+  Si quieres saber cada línea de este archivo te recomiendo que veas estos vídeos:
+  👉 Reset CSS: https://youtu.be/bXqPNoYFK8w
+  👉 Reset PRO en Código: https://www.youtube.com/watch?v=bXqPNoYFK8w    
+
     Estilos generales para que las etiquetas no contengan propiedades
     que nos estorben y en todos los navegadores se vean correctamente
 */
-* {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -35,7 +52,7 @@
   vertical-align: baseline;
 }
 
-img {
+img, picture, video, iframe, figure {
   max-width: 100%;
   width: 100%;
   display: block;
@@ -47,19 +64,6 @@ img {
 
 a {
   display: block;
-  text-decoration: none;
-  color: inherit;
-  font-size: inherit;
-}
-
-video {
-  max-width: 100%;
-  width: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
 }
 
 p a {
@@ -70,21 +74,21 @@ li {
   list-style-type: none;
 }
 
-table, tr, td {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
   font-weight: inherit;
-  font-size: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
 }
 
 ::-moz-selection {
@@ -97,7 +101,7 @@ h1, h2, h3, h4, h5, h6, strong {
   color: var(--blanco);
 }
 
-form, input, textarea, select, button {
+form, input, textarea, select, button, label {
   font-family: inherit;
   font-size: inherit;
   -webkit-hyphens: auto;
@@ -105,15 +109,30 @@ form, input, textarea, select, button {
           hyphens: auto;
   background-color: transparent;
   display: block;
+  color: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
 }
 
 body {
-  font-family: var(--tipo-principal);
-  font-size: 100%;
-  line-height: 1.4em;
   min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
   background-color: var(--blanco);
   color: var(--negro);
+  line-height: 1.4em;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
